@@ -1,0 +1,115 @@
+.mainInfoBox {
+  width: 60%;
+}
+.infoInBox {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px hsla(0, 0%, 57.3%, 0.5);
+  background-color: #fff;
+  margin: 39px 0 0 50px;
+}
+
+.cuponSelectBox {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+  /*height: 25px;*/
+}
+.cuponTitle {
+  margin-right: 8px;
+}
+.cuponSelectBox > select {
+  margin: 0 5px;
+  /*height: 50%;*/
+  /*width: 160px;*/
+  font-size: 16px;
+  border: 1px solid #ccc;
+  z-index: 5;
+}
+
+.cuponSelectBox > select > option {
+  font-size: 14px;
+  z-index: 5;
+}
+
+.cuponSelect {
+  width: 50%;
+}
+
+.goodsBox {
+  /*height: 400px;*/
+  /*overflow: auto;*/
+  display: flex;
+  flex-direction: column;
+  /*border: 1px solid black;*/
+  padding: 10px 20px;
+}
+.infoBox {
+}
+.goods {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+.left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 62%;
+}
+.right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 38%;
+}
+.title {
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+}
+.title:hover {
+  text-decoration: underline;
+  color: blue;
+}
+.imgBox {
+  width: 70px;
+  margin-right: 10px;
+}
+.imgBox > img {
+  width: 70px;
+}
+.count {
+  margin: 0 10px;
+  font-size: 16px;
+  width: 70px;
+}
+.price {
+  text-align: right;
+  width: 130px;
+  font-size: 21px;
+}
+.suma {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+.suma > div {
+  margin: 0 20px;
+}
+.sumaText {
+  font-size: 21px;
+}
+.sumaCount {
+  font-size: 28px;
+}

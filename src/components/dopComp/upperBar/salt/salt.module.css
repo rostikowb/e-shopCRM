@@ -1,0 +1,30 @@
+.saltBox {
+  overflow: auto;
+}
+.saltBox > * {
+  padding: 0 3px;
+}
+.saltBox span {
+  width: 100%;
+  height: 100%;
+  font-size: initial;
+  /*text-transform: uppercase;*/
+  color: #282729;
+  cursor: pointer;
+  text-wrap: normal;
+}
+.saltBox span:hover {
+  color: #00cc9d;
+}
+
+.goodsName {
+  text-overflow: ellipsis;
+}
+@media (max-width: 800px) {
+  .saltBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}

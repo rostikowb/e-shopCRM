@@ -1,0 +1,28 @@
+.wrapper404 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.box404 {
+    text-align: left;
+    /*width: 60%;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*font-size: 25px;*/
+    margin: -10% 0 20px 0;
+    line-height: 1.2;
+}
+
+.box404 span {
+    font-weight: lighter;
+    font-size: calc(13vw + 9vh);
+}
+
+.box404 p {
+    font-weight: lighter;
+    font-size: calc(.3vw + 3.1vh);
+}

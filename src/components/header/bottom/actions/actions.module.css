@@ -1,0 +1,80 @@
+.actionBox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  /*margin-left: auto;*/
+  width: 123px;
+  height: 72px;
+  /*background-color: white;*/
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 3.5em !important;
+  height: auto;
+  color: #ffffff;
+  cursor: pointer;
+}
+.actionBox > img {
+  font-size: 4em;
+  color: blue;
+  /*width: auto;*/
+  /*height: auto;*/
+}
+.heartBox {
+  margin-right: 23px;
+  /*padding: 2px;*/
+  position: relative;
+}
+.basketBox {
+  /*padding: 2px;*/
+  position: relative;
+}
+.heart {
+  /*color: #c30000;*/
+}
+.basket {
+  /*color: blue;*/
+}
+
+.count {
+  position: absolute;
+  min-width: 23px;
+  height: 23px;
+  /*padding: 2px;*/
+  border-radius: 25px;
+  background-color: rgba(168, 0, 171, 0.77);
+  color: white;
+  top: 27px;
+  right: 10px;
+  font-size: 14px;
+  /*font-weight: bold;*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+@media (max-width: 1025px) {
+  .actionBox {
+    height: 48px;
+  }
+}
+
+@media (max-width: 332px) {
+  .actionBox {
+    margin-left: 19vw;
+  }
+}
+@media (max-width: 300px) {
+  .actionBox {
+    margin-left: 10vw;
+  }
+}

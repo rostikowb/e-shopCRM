@@ -1,0 +1,12 @@
+.stubElem {
+  background-color: rgb(233, 233, 233);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: #7d7d7d;
+}
+.stubElem > * {
+  font-size: 78px;
+  color: #8e8e8e;
+}

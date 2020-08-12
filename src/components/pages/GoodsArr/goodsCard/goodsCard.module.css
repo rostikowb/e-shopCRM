@@ -1,0 +1,83 @@
+.cardBox {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  /*border: 1px solid rgba(0, 0, 0, 0.3);*/
+  /*box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);*/
+  /*transition: all .2s;*/
+  /*box-sizing: border-box;*/
+}
+.cardBoxLite {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+.cardBox:hover {
+  /*border: 1px solid white;*/
+  z-index: 3;
+  /*transition: all .8s;*/
+  /*box-shadow: none;*/
+}
+
+.cardBox:focus,
+.cardBox:hover {
+  overflow: visible;
+}
+
+.goodsInner {
+  min-height: 100%;
+  border: 1px solid white;
+  /*-webkit-box-sizing: border-box;*/
+  /*box-sizing: border-box;*/
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: inherit;
+}
+.cardBox:hover .goodsInner {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.75);
+}
+.top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /*align-items: flex-start;*/
+  justify-content: flex-start;
+}
+
+.bottom {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.notAval {
+  position: absolute;
+  width: 101%;
+  height: 100.25%;
+  top: -1px;
+  left: -1px;
+  background-color: rgba(95, 95, 95, 0.5);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.underInfo {
+}
+
+@media (max-width: 1025px) {
+  .cardBox:focus,
+  .cardBox:hover {
+    overflow: hidden;
+  }
+  .cardBox:hover .goodsInner {
+    border: 1px solid white;
+  }
+}

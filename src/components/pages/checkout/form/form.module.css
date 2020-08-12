@@ -1,0 +1,57 @@
+.formBox {
+  width: 40%;
+  /*margin-bottom: 300px;*/
+}
+.form,
+.namesGroup {
+  display: flex;
+  flex-direction: column;
+}
+.namesGroup {
+  width: 100%;
+}
+.deliveryGroupBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+.deliveryGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.deliveryGroup > *:first-child,
+.deliveryGroup:first-child {
+}
+.title {
+  margin-top: 10px;
+}
+.miniTitle {
+  font-size: 16px;
+}
+.select {
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.isAuthMsg {
+  cursor: pointer;
+  font-size: 16px;
+  margin: 25px 0;
+}
+.isAuthMsg:hover {
+  cursor: pointer;
+  color: blue;
+}
+.checkBox {
+  font-size: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px 0;
+}

@@ -1,0 +1,62 @@
+.btnBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0 0 0;
+  width: 100%;
+  /*padding: 0 20px;*/
+}
+.saleBtn {
+  /*position: relative;*/
+  background-color: #ffffff;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 45px;
+  cursor: pointer;
+  margin: 0 25px;
+  border: 1px solid #6b0d68;
+  border-radius: 2px;
+  /*padding: 0 5px;*/
+  font-size: 1.7vw;
+  transition: all 0.15s;
+}
+.saleBtn:hover {
+  /*transition: background-color, color 0.2s;*/
+  /*background-color: #6b0d68;*/
+  transition: all 0.15s;
+  color: white;
+}
+.likeBtn {
+  /*background-color: white;*/
+  color: #919191;
+  /*border-radius: 100px;*/
+  /*border: 1px solid #919191;*/
+  width: 70px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 20px;
+  transition: all 0.3s;
+}
+.likeBtn:hover {
+  color: #980000;
+  /*background-color: ;*/
+  transition: all 0.3s;
+}
+.likeBtnAct {
+  color: #980000;
+}
+.icon {
+  /*color: white;*/
+  margin: 0;
+  padding: 0;
+  font-size: 46px;
+}
+.iconBasket {
+  margin-right: 5px;
+}

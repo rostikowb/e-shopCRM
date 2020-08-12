@@ -1,0 +1,66 @@
+.modal_comment {
+  position: fixed;
+  top: 14%;
+  left: 34%;
+  /*margin: 0 -50% 0 0;*/
+  width: 40em;
+  min-height: 35em;
+  background-color: white;
+  /*background: linear-gradient(0deg, rgba(245, 0, 226, 0.11), rgba(0, 138, 255, 0.1));*/
+  border-radius: 8px;
+  z-index: 12;
+  transition: all 1s;
+  box-shadow: 0 0 20px 5px rgba(68, 68, 68, 0.7);
+  padding: 15px 3px;
+}
+.modal_comment_box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(68, 68, 68, 0.31);
+  z-index: 11;
+}
+.formBox {
+  margin: 0 50px;
+}
+.title {
+  margin: 0 0 5px 0;
+}
+
+.error {
+  border: 1px solid #f44336;
+}
+.error:focus {
+  border: 2px solid #f44336;
+}
+.valid {
+  border: 1px solid #3f51b5;
+}
+.valid:focus {
+  border: 2px solid #3f51b5;
+  /*color: #3f51b5;*/
+}
+.rating {
+}
+.ratingBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 0;
+}
+.ratingSpan {
+  font-size: 18px;
+}
+.commentSendBtn {
+  margin: 10px 0;
+}
+.errMsg {
+  color: red;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+}

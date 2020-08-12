@@ -1,0 +1,35 @@
+.likeBox {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  background-color: #6f000070;
+  border-radius: 60px;
+  top: 77%;
+  right: 2%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid #6f000070;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 1px 1px #6f000070;
+}
+
+.likeBox:hover {
+  background-color: rgb(155, 0, 0);
+  transition: all 0.2s;
+}
+.likeBoxAct {
+  background-color: rgb(155, 0, 0);
+}
+.icon {
+  color: #d4d4d4;
+  font-size: 150%;
+}
+
+.likeBox:hover .icon {
+  color: white;
+  transition: all 0.2s;
+}

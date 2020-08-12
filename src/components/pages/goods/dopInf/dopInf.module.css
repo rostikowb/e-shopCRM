@@ -1,0 +1,19 @@
+.dopInfBox {
+  /*background-color: blue;*/
+  min-width: 40%;
+  /*height: 800px;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.topInfBox {
+  margin: 20px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.topInfBox > * {
+  /*margin: 0 5px;*/
+}

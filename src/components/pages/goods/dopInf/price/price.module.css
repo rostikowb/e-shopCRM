@@ -1,0 +1,39 @@
+.priceBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.priceInBox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  color: #898989;
+  font-size: 25px;
+  margin: 0 10px 0 20px;
+  font-weight: lighter;
+}
+.newPrice {
+  color: rgb(226, 19, 19);
+  font-size: 49px;
+  font-weight: lighter;
+  margin: 0 5px 0 0;
+}
+
+.avlbl {
+  font-size: 14px;
+  width: 123px;
+  /*margin: 0 0 0 0;*/
+}
+.avlblYes {
+  color: #0dc00c;
+}
+.avlblNo {
+  color: #999aa4;
+}

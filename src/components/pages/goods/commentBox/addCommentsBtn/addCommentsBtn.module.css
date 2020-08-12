@@ -1,0 +1,22 @@
+.addCommentBtn {
+  /*position: relative;*/
+  background-color: #ffffff;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 5px;
+  cursor: pointer;
+  margin: 25px;
+  border: 1px solid #6b0d68;
+  border-radius: 2px;
+  /*padding: 0 5px;*/
+  font-size: 1.2vw;
+  transition: all 0.15s;
+}
+.addCommentBtn:hover {
+  /*transition: background-color, color 0.2s;*/
+  /*background-color: #6b0d68;*/
+  transition: all 0.15s;
+  color: white;
+}

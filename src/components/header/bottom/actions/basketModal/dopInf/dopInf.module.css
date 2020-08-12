@@ -1,0 +1,82 @@
+.suma {
+  width: 100%;
+  height: 16%;
+  border-top: 2px solid rgba(179, 179, 179, 0.47);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.suma > * {
+  width: 33.33%;
+  display: flex;
+  /*flex-direction: row;*/
+  /*align-items: center;*/
+  justify-content: center;
+  /*height: 100%;*/
+}
+.sumaInBox {
+  /*font-size: 18px;*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /*margin-left: 20px;*/
+}
+.countSum {
+  font-size: 250%;
+  /*color: #d10000;*/
+  margin-left: 20px;
+  font-weight: lighter;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  width: 28%;
+}
+
+.red {
+  color: red;
+}
+
+.deliv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  /*margin-left: 30px;*/
+  font-size: 16px;
+}
+.deliv li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 3px 0;
+}
+
+.delivTitle {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.sumaBtnBox {
+  /*height: 100%;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.sumaBtn {
+  font-size: 28px;
+  padding: 10px;
+  background: linear-gradient(45deg, rgb(155, 1, 1), #81157d);
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.sumaBtn a {
+  color: white;
+}

@@ -1,0 +1,23 @@
+.headerBottom{
+    /*background-color: #70798a;*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@media (max-width: 1025px) {
+    .headerBottom {
+        justify-content: space-around;
+    }
+}
+@media (max-width: 382px) {
+    .headerBottom {
+        justify-content: space-evenly;
+    }
+}
+@media (max-width: 332px) {
+    .headerBottom {
+        justify-content: flex-start;
+    }
+}

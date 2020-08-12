@@ -1,0 +1,26 @@
+.cardBox {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  transition: all 1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardBox:hover .icon {
+  transform: rotate(720deg);
+  transition: transform 2s;
+}
+
+.icon {
+  font-size: 72px;
+  margin-bottom: 25px;
+
+  transition: transform 1s;
+}
+
+.cardBox span {
+  font-size: 25px;
+}

@@ -1,0 +1,62 @@
+.commentsArr {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.comment {
+  /*height: 300px;*/
+  display: flex;
+  flex-direction: column;
+  border-radius: 40px 0 40px 0;
+  margin: 10px;
+  font-size: 16px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #333;
+  padding: 15px;
+}
+.comment > span {
+  width: 100%;
+  padding: 5px 0;
+}
+
+.nameData {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /*border-bottom: 1px solid #b7b7b7;*/
+}
+.name {
+  /*margin-right: 15px;*/
+}
+
+.msg {
+  /*border-bottom: 1px solid black;*/
+  /*border-top: 1px solid black;*/
+  margin: 10px 0;
+  text-align: justify;
+}
+.plus,
+.minus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.plus > span:first-child,
+.minus > span:first-child,
+.name > span:first-child {
+  font-size: 14px !important;
+  margin-right: 3px;
+}
+.posi {
+  border: 1px solid rgb(0, 255, 0);
+  background-color: white;
+}
+
+.nega {
+  border: 1px solid rgb(255, 0, 0);
+  background-color: white;
+}

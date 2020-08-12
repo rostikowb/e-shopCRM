@@ -1,0 +1,32 @@
+/*.formBox {*/
+/*margin: 20px 0;*/
+/*}*/
+
+.form {
+}
+.secLoginMenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.secLoginMenu > span {
+  margin: 5px;
+  color: #000;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 1px;
+}
+.title {
+  margin: 10px 0;
+  color: black;
+}
+.errMsg {
+  color: red;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+}

@@ -1,0 +1,38 @@
+.shortHaractBox {
+    width: 100%;
+    margin: 5px;
+}
+
+.shortHaractBox > ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.shortHaractBox > ul > li {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2px 0;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+.shortHaractBox > ul > li > span:first-child {
+    color: #444444;
+}
+
+.shortHaractBox > ul > li > span:last-child {
+    color: #0f0f0f;
+    font-weight: bold;
+}
+
+@media (max-width: 1025px) {
+    .shortHaractBox{
+        display: none;
+    }
+}

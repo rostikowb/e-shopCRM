@@ -1,0 +1,35 @@
+.mainBox {
+  width: 18vw;
+  background-color: #ebebeb;
+  /*height: 500px;*/
+
+  border: 1px solid #c3c1bb;
+  /*transition: all 2s;*/
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+}
+
+.mainBox > * {
+  margin: 5px 0 200px 0;
+}
+
+@media (max-width: 1025px) {
+  .mainBox {
+    display: none;
+  }
+}
+@media (max-width: 1700px) {
+  .mainBox {
+    width: 21vw;
+  }
+}
+
+@media (max-width: 1050px) {
+  .mainBox {
+    width: 30vw;
+  }
+}
+@media (max-width: 790px) {
+  .mainBox {
+    width: 40vw;
+  }
+}

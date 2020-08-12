@@ -1,0 +1,120 @@
+.cardBox {
+  color: black;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px 5px 10px;
+  border: 1px solid #b3b3b3;
+  box-sizing: border-box;
+  margin: 5px;
+}
+.cardBox > div {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.imgBox {
+  height: 100px;
+  width: auto;
+  user-select: none;
+  cursor: pointer;
+}
+.imgBox img {
+  height: 100%;
+  width: auto;
+}
+.name {
+  font-size: 18px;
+  color: black;
+  cursor: pointer;
+}
+.NamePrice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-left: 8px;
+}
+.priceBox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 5px;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  color: #898989;
+  font-size: 23px;
+  margin: 0 10px 0 20px;
+  font-weight: lighter;
+}
+.newPrice {
+  color: rgb(226, 19, 19);
+  font-size: 32px;
+  font-weight: lighter;
+  margin: 0 5px 0 0;
+}
+.delBtn {
+  font-size: 24px;
+  color: #000;
+  transition: all 0.2s;
+  cursor: pointer;
+  user-select: none;
+}
+.delBtn:hover {
+  color: rgb(156, 0, 7);
+  transition: all 0.2s;
+}
+.countBtn {
+  font-size: 28px;
+  margin: 0 10px;
+  /*padding: 5px;*/
+  width: 30px;
+  height: 30px;
+  /*background-color: #eaeaea;*/
+  color: #000000;
+  border: 1px solid black;
+  border-radius: 2px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  transition: all 0.2s;
+}
+.countBtn:hover {
+  transition: all 0.2s;
+  color: white;
+  background-color: black;
+}
+.count {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 40px;
+}
+.isCount {
+  width: 30px;
+  border: none;
+  height: 30px;
+  font-size: 24px;
+  /*padding: 0 5px;*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

@@ -1,0 +1,46 @@
+.likeBoxIn {
+  min-height: 15vh;
+  height: auto;
+  /*height: 10vw;*/
+  min-width: 8vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
+.empLikMsg {
+  position: absolute;
+  top: 48%;
+  /*height: 100%;*/
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  /*padding: 20px;*/
+  color: #303030;
+  flex-wrap: wrap;
+}
+.goodsElem {
+  background-color: white;
+
+  min-width: 180px;
+  max-width: 95%;
+  height: 400px;
+  margin: 2vh 0.2vw;
+
+  /*width: 300px;*/
+  width: 16%;
+}
+.goodsElem > *:hover {
+  z-index: 3;
+}
+.title {
+  font-size: 25px;
+  border-bottom: 1px solid black;
+  width: auto;
+  padding: 5px;
+  text-align: left;
+}

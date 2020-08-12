@@ -1,0 +1,185 @@
+.mainMenuBox{
+    width: 100%;
+
+}
+.menu{
+    position: relative;
+    height: 40px;
+    /*padding-right: 10px;*/
+    /*padding-left: 10px;*/
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,.5);
+    background-color: rgba(255,255,255,0);
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    /*-webkit-transition: .2s ease-in-out;*/
+    /*-o-transition: .2s ease-in-out;*/
+    /*transition: all .2s ease-in-out;*/
+    margin-right: 2vw;
+    display: none;
+
+}
+
+.menu>*{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu > button{
+
+    position: relative;
+    height: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,.5);
+    background-color: rgba(255,255,255,0);
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    /*-webkit-transition: .2s ease-in-out;*/
+    /*-o-transition: .2s ease-in-out;*/
+    /*transition: all .2s ease-in-out;*/
+    outline: none;
+}
+
+.menu > button:focus{
+    outline: none;
+}
+.menu > button:hover{
+    background-color: rgba(255,255,255,.1);
+}
+
+.icon{
+    font-size: 25px;
+}
+
+.menuBox{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    background-color: #ebebeb;
+    height: 100%;
+}
+.mainMenuBox > *{
+    margin-bottom: 5px;
+    /*position: ;*/
+    /*background: linear-gradient(0deg, #770f0f, #530b51, #770f0f);*/
+}
+
+.menuBtnCls {
+    /*position: relative;*/
+    height: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+    /*border-radius: 3px;*/
+    border: none;
+    border-bottom: 2px solid rgb(107, 13, 104);
+    /*background-color: rgba(255,255,255,0);*/
+    white-space: nowrap;
+
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    /*-webkit-transition: .2s ease-in-out;*/
+    /*-o-transition: .2s ease-in-out;*/
+    /*transition: all .2s ease-in-out;*/
+    outline: none;
+
+}
+
+.menuBtnCls > *{
+    font-size: 36px;
+}
+
+
+
+
+
+
+.tabs {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+.tab {
+    width: 100%;
+    color: white;
+    overflow: hidden;
+}
+.tabLabel {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 1em;
+    background: #2c3e50;
+    font-weight: bold;
+    cursor: pointer;
+    /* Icon */
+}
+.tabLabel:hover {
+    background: #1a252f;
+}
+.tabLabel::after {
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+}
+.tabContent {
+    max-height: 0;
+    padding: 0 1em;
+    color: #2c3e50;
+    background: white;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+}
+.tabClose {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: #2c3e50;
+    cursor: pointer;
+}
+.tabClose:hover {
+    background: #1a252f;
+}
+
+input:checked + .tabLabel {
+    background: #1a252f;
+}
+input:checked + .tabLabel::after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+input:checked ~ .tabContent {
+    max-height: 100vh;
+    padding: 1em;
+}
+
+
+
+
+
+
+
+@media (max-width: 1025px) {
+    .menuLogoBox{
+        display: flex;
+    }
+    .menu{
+        display: inline-block;
+    }
+}

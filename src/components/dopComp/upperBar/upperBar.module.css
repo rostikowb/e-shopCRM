@@ -1,0 +1,33 @@
+.upperBar {
+  height: 35px;
+  background-color: #ebebeb;
+  border: 1px solid #c3c1bb;
+  border-right: none;
+  margin: 5px;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+  width: 98.5%;
+
+  /*box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);*/
+  border-radius: 2px;
+  /*color: rgba(0, 0, 0, 0.87);*/
+  /*transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;*/
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 5px;
+  font-size: 16px;
+  color: #282729;
+}
+
+@media (max-width: 800px) {
+  .upperBar {
+    flex-direction: column;
+    height: auto;
+  }
+  .upperBar > * {
+    margin: 5px 0;
+    width: 100%;
+  }
+}

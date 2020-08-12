@@ -1,0 +1,23 @@
+.ratingBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0 3px;
+}
+
+.ratingBox > a{
+    color: #0000FF;
+    /*font-weight: bold;*/
+    font-size: 12px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    cursor: pointer;
+}
+
+.ratingBox > a:hover {
+    color: rgba(255, 0, 253, 0.8);
+}
+
+.ratingBox > a:active{
+    color: #FF0000;
+}

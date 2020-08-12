@@ -1,0 +1,10 @@
+.infoBox {
+  display: flex;
+  flex-direction: row;
+}
+.infoBox a {
+  color: white;
+}
+.infoBox > li {
+  margin: 0 10px 0 0;
+}

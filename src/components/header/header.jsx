@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header className={s.header}>
       <div className={s.wrapper}>
-        <Top />
+        {/*<Top />*/}
         <Bottom />
       </div>
     </header>

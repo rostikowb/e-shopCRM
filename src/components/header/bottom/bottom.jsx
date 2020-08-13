@@ -8,8 +8,6 @@ import Search from "./searchInput/search";
 import { Actions } from "./actions/actions";
 import { CatalogModal } from "./catalog/catalogModal/catalogModal";
 import { changeStateCatalogModal } from "../../../redux/modal/actions";
-import { LikesModal } from "./actions/likesModal/likesModal";
-import { BasketModal } from "./actions/basketModal/basketModal";
 
 const mapStateToProps = (state) => {
   return {
@@ -26,12 +24,6 @@ export const Bottom = connect(mapStateToProps, {
     <div className={s.headerBottom}>
       <MenuBtn />
       <Logo />
-      <CatalogBtn />
-      <Search />
-      <Actions />
-      {props.catalog ? <CatalogModal /> : null}
-      {props.like ? <LikesModal /> : null}
-      {props.basket ? <BasketModal /> : null}
     </div>
   );
 });

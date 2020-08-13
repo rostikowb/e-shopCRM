@@ -1,16 +1,16 @@
 // import s from './info.module.css';
-import React from 'react';
-import {Acordeon} from '../../dopComp/acardeon/acardeon'
-import {InfoContent} from './infoContent'
-
+import React from "react";
+import { Acordeon } from "../../dopComp/acardeon/acardeon";
+import { InfoContent } from "./infoContent";
 
 export const Info = () => {
-    return (
-        <Acordeon
-            info={{
-            title: 'Полезная информация',
-            content: <InfoContent/>
-        }}/>
-
-    )
+  return (
+    <Acordeon
+      defaultExpanded={true}
+      info={{
+        title: "Полезная информация",
+        content: <InfoContent />,
+      }}
+    />
+  );
 };

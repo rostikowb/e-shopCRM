@@ -4,7 +4,10 @@ import { AllGoodsR } from "./goodsArr/AllGoodsReducer";
 import { oneGoods } from "./oneGoods/reducer";
 import { addLikesBasket } from "./likesBasket/reducer";
 import { auth } from "./auth/reducer";
-import { checkout } from "./checkout/reducer";
+// import { checkout } from "./checkout/reducer";
+import { orders } from "./orders/reducer";
+import { tickets } from "./tickets/reducer";
+import { users } from "./users/reducer";
 
 export default combineReducers({
   modal,
@@ -12,5 +15,7 @@ export default combineReducers({
   AllGoodsR,
   addLikesBasket,
   auth,
-  checkout,
+  orders,
+  tickets,
+  users,
 });

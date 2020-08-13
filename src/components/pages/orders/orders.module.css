@@ -1,0 +1,79 @@
+.mainBox {
+  width: 100%;
+}
+.ordersBox {
+  /*width: 100%;*/
+  /*padding: 25px;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 15px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.orderItem {
+  /*width: 100%;*/
+  margin: 10px 0;
+  background-color: white;
+  /*box-shadow: 0 0 0 1px black;*/
+  border: 1px solid rgba(0, 0, 255, 0.18);
+  padding: 3px 8px;
+  min-width: 20%;
+}
+/*.orderItem:nth-child(2n) {*/
+/*background-color: #ebebeb;*/
+/*}*/
+.orderItem > * {
+  padding: 3px 8px;
+}
+.orderItemTop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.Id {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.Id:hover {
+  cursor: pointer;
+  color: blue;
+}
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3px 0;
+  padding: 3px 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.userInfo > * {
+  margin-right: 5px;
+  /*border-right: 1px solid black;*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.userInfo > * > *:last-child {
+  font-weight: bold;
+}
+.goodsInfoBox {
+  /*margin-left: 50px;*/
+}
+.orderOnGoodBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.sumaPrice {
+  margin: 10px 0;
+}

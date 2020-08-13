@@ -1,39 +1,11 @@
 .logo {
-    display: none;
-    /*background-color: white;*/
-    margin-right: 24px;
-    height: auto;
-    width: 224px;
-    vertical-align: bottom;
+  display: inline-block;
+  /*background-color: white;*/
+  margin-right: 24px;
+  height: auto;
+  width: 162px;
+  vertical-align: bottom;
 }
 
 .logo > img {
-
 }
-
-@media (min-width: 768px) {
-    .logo {
-        display: inline-block;
-        width: 100px;
-        margin-right: 10px;
-        /*overflow: hidden;*/
-        /*-ms-flex-negative: 0;*/
-        /*flex-shrink: 0;*/
-        /*margin-right: 24px;*/
-
-    }
-}
-
-@media (min-width: 1280px) {
-    .logo {
-        margin-right: 24px;
-        width: 240px;
-        height: auto;
-        /*width: auto;*/
-        overflow: visible;
-
-    }
-}
-
-
-

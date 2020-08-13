@@ -1,6 +1,6 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
-import Paper from "@material-ui/core/es/Paper/Paper";
+import { Paper } from "@material-ui/core";
 import s from "./goodsCard.module.css";
 import { Img } from "./img/img";
 import { Title } from "./title/title";

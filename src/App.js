@@ -7,7 +7,7 @@ import page404 from "./components/statusCodePages/404/404";
 import loader from "./assets/img/loader.gif";
 import { config } from "react-transition-group";
 import { initLocalStorage } from "./localStorage/localStorFunc";
-import { Checkout } from "./components/pages/checkout/checkout";
+// import { Checkout } from "./components/pages/checkout/checkout";
 import { GoodsRoute } from "./components/routes/goods";
 
 // const AddNewsPage = React.lazy(() => import('./components/adminPanel/addNews/addNewsPage/addNewsPage'));
@@ -44,7 +44,7 @@ class App extends Component {
             }
           >
             <Switch>
-              <Route path="/checkout" component={Checkout} />
+              {/*<Route path="/checkout" component={Checkout} />*/}
               <Route path="/" component={GoodsRoute} />
               <Route component={page404} />
             </Switch>

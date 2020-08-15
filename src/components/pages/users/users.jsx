@@ -3,19 +3,20 @@ import { Paper } from "@material-ui/core";
 import s from "./users.module.css";
 import ss from "./../orders/orders.module.css";
 import { connect } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 import { fetchAllUsers } from "../../../redux/users/actions";
 import { setFetchArrOrders } from "../../../redux/orders/actions";
 
 export const User = (props) => {
+  const id = useLocation().pathname.split("/")[2] || false;
   const setOrdersArr = (arr) => {
     props.setFetchArrOrders(arr);
   };
 
   useEffect(() => {
-    props.fetchAllUsers(props.token);
-  }, []);
+    props.fetchAllUsers(props.token, id);
+  }, [id]);
   return (
     <div className={ss.mainBox}>
       <div className={ss.ordersBox}>

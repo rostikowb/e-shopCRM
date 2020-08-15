@@ -3,6 +3,7 @@ import { GET_USER, GET_USERS } from "../types";
 const initialState = {
   arr: [],
   one: [],
+  createData: {},
 };
 
 export const users = (state = initialState, action) => {

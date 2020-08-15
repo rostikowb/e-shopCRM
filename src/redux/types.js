@@ -34,3 +34,4 @@ export const GET_ARR_ORDERS = "ORDERS/GET_ARR_ORDERS";
 export const GET_ONE_ORDERS = "ORDERS/GET_ONE_ORDERS";
 export const GET_TICKETS = "TICKETS/GET_TICKETS";
 export const GET_USERS = "USERS/GET_USERS";
+export const GET_USER = "USERS/GET_ONE_USER";

@@ -11,7 +11,7 @@ import {
 import bent from "bent";
 import { option } from "../../option";
 
-export const fetchAllUsers = (token) => {
+export const fetchAllUsers = (token, userId = false) => {
   return async (dispatch) => {
     let res = await bent(
       option.api,
@@ -21,7 +21,7 @@ export const fetchAllUsers = (token) => {
       200
     )(
       "/users/readAll",
-      {},
+      { userId },
       {
         authorization: token,
       }

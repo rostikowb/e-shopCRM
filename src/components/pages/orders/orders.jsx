@@ -84,7 +84,7 @@ export const Order = (props) => {
                           <span>
                             <NavLink
                               className={s.Id}
-                              to={`/goods/${good.goodsId}`}
+                              to={`/goods/create/${good.goodsId}`}
                             >
                               goodsId
                             </NavLink>

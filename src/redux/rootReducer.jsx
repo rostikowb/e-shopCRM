@@ -8,6 +8,7 @@ import { auth } from "./auth/reducer";
 import { orders } from "./orders/reducer";
 import { tickets } from "./tickets/reducer";
 import { users } from "./users/reducer";
+import { goods } from "./goods/reducer";
 
 export default combineReducers({
   modal,
@@ -18,4 +19,5 @@ export default combineReducers({
   orders,
   tickets,
   users,
+  goods,
 });

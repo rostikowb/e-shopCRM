@@ -15,6 +15,7 @@ import { Users } from "../pages/users/users";
 import { Tickets } from "../pages/tickets/tickets";
 import { Orders } from "../pages/orders/orders";
 import { CreateGoods } from "../pages/goods/create/createGoods";
+import { createGoodsMenu } from "../pages/goods/create/createGoodsMenu";
 
 // let productLabel = props.product?.nm;
 
@@ -29,7 +30,8 @@ export const GoodsRout = (props) => {
         <div className={s.rightMain}>
           {/*<UpperBar name={productLabel} />*/}
           <Switch>
-            <Route path="/goods/create" component={CreateGoods} />
+            <Route path="/goods/create/:goodsId" component={CreateGoods} />
+            <Route path="/goods/create" component={createGoodsMenu} />
             <Route path="/goods" component={Goods} />
             <Route path="/users" component={Users} />
             {/*<Route path="/users/read:id" component={Users} />*/}

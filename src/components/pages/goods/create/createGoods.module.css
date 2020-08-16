@@ -1,0 +1,114 @@
+.createBox {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.createGoodsInBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.priceEnd {
+  font-size: 38px;
+}
+
+.prmItemBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.prmItemBox > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.prmItemBox > div > * {
+  margin: 5px 0;
+  width: 100%;
+}
+
+.delPrmBtn {
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.delPrmBtn:hover {
+  color: red;
+  transition: all 0.3s;
+}
+
+.addPrmBtn {
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid black;
+  margin: 0;
+}
+
+.addPrmBtn:hover {
+  color: #00ff17;
+  transition: all 0.3s;
+  border: 1px solid #00ff17;
+}
+
+.startCreate {
+  border: 1px solid black;
+  padding: 20px;
+  font-size: 30px;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin-top: 200px;
+}
+
+.startCreate:hover {
+  border: 1px solid black;
+  padding: 20px;
+  font-size: 30px;
+  color: red;
+  background-color: black;
+  transition: all 0.3s;
+}
+.ImgBox {
+  width: 200px;
+  min-height: 200px;
+  margin: 0 10px;
+  position: relative;
+  background-color: #ababab;
+}
+.ImgBox > img {
+  width: 100%;
+}
+.addImg {
+  color: rgba(255, 255, 255, 0.11);
+  font-size: 88px;
+  position: absolute;
+  /*top: 17%;*/
+  /*left: 39%;*/
+  transition: all 0.3s;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.addImg:hover {
+  color: white;
+  transition: all 0.3s;
+}

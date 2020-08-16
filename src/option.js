@@ -17,6 +17,10 @@ export const option = {
     "забрано",
     "отказ",
   ],
+  shipper: [
+    { value: "axus", label: "axus" },
+    { value: "kievopt", label: "kievopt" },
+  ],
   goods: [
     { value: "11900213", label: "Кабели синхронизации" },
     { value: "11900214", label: "Чехлы" },

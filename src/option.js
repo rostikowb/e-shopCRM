@@ -1,6 +1,6 @@
 export const option = {
-  api: "http://localhost:3001",
-  // api: 'https://api.poap.pl.ua',
+  // api: "http://localhost:3001",
+  api: "https://api.vsivuha.online",
   // domen: 'http://localhost:3000'
   // goodsCount
   GC: 59,

@@ -1,8 +1,32 @@
 import bent from "bent";
 import { option } from "../../option";
-import { CREATE_STUB_GOODS, GET_ONE_GOODS, PRODUCT } from "../types";
+import { GET_ONE_GOODS, UPDATE_GOODS, UPLOAD_IMG } from "../types";
 
-export const uploadFiles = (token, file, pathname, count) => {
+export const updateGoodsOne = (token, obj) => {
+  return async (dispatch) => {
+    let res = await bent(
+      option.api,
+      "string",
+      "POST",
+      "json",
+      200
+    )(
+      "/goods/update",
+      { obj },
+      {
+        authorization: token,
+      }
+    );
+    console.log(res);
+    dispatch({
+      type: UPDATE_GOODS,
+      arr: res["arr"],
+      invalid: res["invalid"],
+      msg: res["msg"],
+    });
+  };
+};
+export const uploadFiles = (token, file, _id, count, name) => {
   return async (dispatch) => {
     let res = await bent(
       option.api,
@@ -12,16 +36,18 @@ export const uploadFiles = (token, file, pathname, count) => {
       200
     )(
       "/img/save",
-      { file, pathname, count },
+      { file, _id, count, name },
       {
         authorization: token,
       }
     );
     console.log(res);
-    // dispatch({
-    //   type: GET_USERS,
-    //   arr: res["arr"],
-    // });
+    dispatch({
+      type: UPLOAD_IMG,
+      arr: res["arr"],
+      invalid: res["invalid"],
+      msg: res["msg"],
+    });
   };
 };
 export const createStubGoods = (token) => {

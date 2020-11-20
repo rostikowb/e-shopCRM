@@ -7,11 +7,13 @@ import { connect } from "react-redux";
 import {
   createStubGoods,
   fetchOneGoods,
+  updateGoodsOne,
   uploadFiles,
 } from "../../../../redux/goods/actions";
 import { useLocation } from "react-router";
 import { option } from "../../../../option";
 import Select from "react-select";
+import Button from "@material-ui/core/es/Button/Button";
 
 const fileToBasw64 = async (value) => {
   return await new Promise((resolve, reject) => {
@@ -43,7 +45,8 @@ const defSel = (type, value) => {
 export const CreateGood = (props) => {
   const _id = useLocation().pathname.split("/")[3];
   const d = props.product;
-  const [files, setFiles] = useState(null);
+  const imgArr = props.imgArr;
+
   const [data, setData] = useState({
     avlbl: true,
     drUrl: "",
@@ -62,7 +65,7 @@ export const CreateGood = (props) => {
     stck_qntt: 0,
     vndr: "",
   });
-  console.log("ddddddddddddddddddddddd", d._id);
+
   const prmCHange = (index, atr, value) => {
     data.prm[index][atr] = value;
     setData({ ...data });
@@ -82,7 +85,8 @@ export const CreateGood = (props) => {
     data[type] = value;
     if (type === "optPrc" || type === "dopPrc" || type === "dscnt") {
       data.rtlPrc =
-        data.optPrc + (data.optPrc / 100) * (data.dopPrc - data.dscnt);
+        Number(data.optPrc) +
+        Number(data.optPrc / 100) * Number(data.dopPrc - data.dscnt);
     }
     setData({ ...data });
   };
@@ -92,11 +96,15 @@ export const CreateGood = (props) => {
     setData({ ...data });
   };
 
-  const changeImg = async (value) => {
+  const changeImg = async (count, value) => {
     if (value) {
       const base64 = await fileToBasw64(value);
-      props.uploadFiles(props.token, base64, "sssssd", "1");
+      props.uploadFiles(props.token, base64, _id, count, value[0].name);
     }
+  };
+
+  const send = () => {
+    props.updateGoodsOne(props.token, data);
   };
 
   useEffect(() => {
@@ -104,6 +112,14 @@ export const CreateGood = (props) => {
       props.fetchOneGoods(_id);
     }
   }, [_id]);
+
+  useEffect(() => {
+    console.log("imgArr");
+    // setIsLoad(true);
+
+    data.img = imgArr;
+    setData({ ...data });
+  }, [imgArr]);
 
   useEffect(() => {
     if (d) {
@@ -216,9 +232,9 @@ export const CreateGood = (props) => {
             margin="normal"
             required={true}
             fullWidth
-            label="Наша наценка в %"
+            label="Наша наценка в % (рекомендовано 50)"
             type="number"
-            value={data.dopPrc || 50}
+            value={data.dopPrc}
             onChange={(event) => chngInpLn("dopPrc", event.target.value)}
           />
         </div>
@@ -246,20 +262,20 @@ export const CreateGood = (props) => {
           <CKEditor
             editor={ClassicEditor}
             data={data.dscrptn}
-            onInit={(editor) => {
-              // You can store the "editor" and use when it is needed.
-              console.log("Editor is ready to use!", editor);
-            }}
+            // onInit={(editor) => {
+            //   // You can store the "editor" and use when it is needed.
+            //   console.log("Editor is ready to use!", editor);
+            // }}
             onChange={(event, editor) => {
               const data = editor.getData();
               console.log({ event, editor, data });
             }}
-            onBlur={(event, editor) => {
-              console.log("Blur.", editor);
-            }}
-            onFocus={(event, editor) => {
-              console.log("Focus.", editor);
-            }}
+            // onBlur={(event, editor) => {
+            //   console.log("Blur.", editor);
+            // }}
+            // onFocus={(event, editor) => {
+            //   console.log("Focus.", editor);
+            // }}
           />
         </div>
         <div className={s.inputBox}>
@@ -338,17 +354,67 @@ export const CreateGood = (props) => {
         </div>
         <div className={s.inputBox}>
           <h2>Фото</h2>
-          {data.img.length
-            ? data.img.map((item) => (
-                <div className={s.ImgBox}>
-                  <img src={item} alt="" /> <div className={s.addImg}>+</div>
-                </div>
-              ))
-            : null}
-          <div className={s.ImgBox}>
-            <div className={s.addImg}>+</div>
+          <div className={s.imgAllBox}>
+            {data.img.length
+              ? data.img.map((item, index) => (
+                  <div key={_id + index} className={s.ImgBox}>
+                    <div className={s.img}>
+                      <img
+                        src={
+                          option.api +
+                          "/static/webp/" +
+                          _id +
+                          "/" +
+                          item +
+                          "-400.webp"
+                        }
+                        alt=""
+                      />
+                    </div>
+
+                    <Button
+                      className={s.addImg}
+                      variant="contained"
+                      component="label"
+                    >
+                      +
+                      <input
+                        type="file"
+                        onChange={(e) => changeImg(index, e.target.files)}
+                        style={{ display: "none" }}
+                      />
+                    </Button>
+                  </div>
+                ))
+              : null}
+            <div className={s.ImgBox}>
+              <div className={s.img}></div>
+              <Button
+                className={s.addImg}
+                variant="contained"
+                component="label"
+              >
+                +
+                <input
+                  type="file"
+                  onChange={(e) => changeImg(data.img.length, e.target.files)}
+                  style={{ display: "none" }}
+                />
+              </Button>
+            </div>
           </div>
+
+          {/*<div onClick={() => sendToSave(files)}>Otpravit</div>*/}
         </div>
+        <div onClick={() => send()} className={s.sendBtn}>
+          Обновити сторінку товару
+        </div>
+        {props.errMsg ? (
+          <span className={s.errMsg}>Якась проблема {props.errMsg}</span>
+        ) : null}
+        {props.doneMsg ? (
+          <span className={s.doneMsg}>Все нормально обновилось</span>
+        ) : null}
       </div>
     </div>
   );
@@ -357,6 +423,9 @@ const mapStateToProps = (state) => {
   return {
     token: state.auth.token,
     product: state.goods.one,
+    imgArr: state.goods.imgArr,
+    errMsg: state.goods.errMsg,
+    doneMsg: state.goods.doneMsg,
   };
 };
 
@@ -364,4 +433,5 @@ export const CreateGoods = connect(mapStateToProps, {
   uploadFiles,
   fetchOneGoods,
   createStubGoods,
+  updateGoodsOne,
 })(CreateGood);

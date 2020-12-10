@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from '@material-ui/core';
 import './infoUser.css';
 
 class infoUser extends Component {
@@ -47,6 +48,7 @@ class infoUser extends Component {
                            <li></li>
                        </div>
                     </ul>
+                    <Button variant="outlined" color="primary">Изменить</Button>
                 </div>
             </div>
         );

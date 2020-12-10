@@ -13,6 +13,10 @@
     margin-top: 1em;
 }
 
+.wrapper-info-user > .container__info-user button {
+    margin-top: 3em;
+}
+
 .wrapper-info-user .list__info-user{
     /* background: #999999; */
     max-width: 768px;

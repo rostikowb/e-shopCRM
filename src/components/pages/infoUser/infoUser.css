@@ -1,0 +1,38 @@
+.wrapper-info-user{
+    max-width: 1140px;
+    width: 100%;
+    /* background: lightblue; */
+    text-align: initial;
+}
+
+.wrapper-info-user > .container__info-user h2{
+    padding: 0 10px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    margin-top: 1em;
+}
+
+.wrapper-info-user .list__info-user{
+    /* background: #999999; */
+    max-width: 768px;
+    margin-top: 3em;
+}
+
+.wrapper-info-user .list__info-user > .item__user-info{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);;
+    display: flex;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.1em;
+}
+.wrapper-info-user .list__info-user > .item__user-info:last-child{
+    margin-bottom: 0;
+}
+.wrapper-info-user .list__info-user .label__user-info{
+    /* background: purple; */
+    min-width: 100px;
+    font-weight: 700;
+}
+

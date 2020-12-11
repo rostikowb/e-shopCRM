@@ -40,3 +40,29 @@
     font-weight: 700;
 }
 
+
+.user-modal{
+    padding: 2em;
+}
+.user-modal > h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+
+.user-modal form{
+    margin: 2em 0;
+}
+.user-modal form button{
+    cursor: pointer;
+    background: #4CAF50;
+    color: #FFF;
+    padding: 10px;
+    font-size: 15px;
+    max-width: 160px;
+    width: 100%;
+    outline: none;
+    border: none;
+    margin-top: 2em;
+    border-radius: 4px
+}

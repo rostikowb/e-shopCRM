@@ -2,7 +2,6 @@ import React from 'react';
 import './RenderField.css';
 
 const RenderField = ({field, form, ...props }) => {
-    console.log(props);
     return (
         <div className="wrapper-field">
             <label htmlFor="#">{props.placeholder}</label>

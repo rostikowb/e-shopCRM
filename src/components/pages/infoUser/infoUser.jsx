@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import {Formik, Form, Field} from 'formik';
+import {fetchAllUsers} from '../../../redux/users/actions';
 import { Button } from '@material-ui/core';
 import DialogComponent from '../../HelperComponents/DialogComponent/DialogComponent';
 import RenderField from '../../HelperComponents/RenderField/RenderField';
@@ -12,6 +14,13 @@ class infoUser extends Component {
     state = {
         isOpenModal: false
     }
+
+    componentDidMount() {
+        const { match: { params }, token, fetchAllUsers } = this.props;
+        fetchAllUsers(token, params.id);
+    }
+    
+
     handleOpenModal = () => {
         this.setState({ isOpenModal: true })
     }
@@ -21,8 +30,12 @@ class infoUser extends Component {
 
 
     render() {
-        const { match: { params } } = this.props;
+        const { match: { params }, users } = this.props;
         const { isOpenModal } = this.state;
+        const user = users[0];
+        if(!user){
+            return <p>Loading....</p>
+        }
         return (
             <div className="wrapper-info-user">
                 <div className="container__info-user">
@@ -30,19 +43,19 @@ class infoUser extends Component {
                     <ul className="list__info-user">
                         <div className="item__user-info">
                             <li className="label__user-info">Имя</li>
-                            <li>Ростислав</li>
+                            <li>{user.FN}</li>
                         </div>
                         <div className="item__user-info">
                             <li className="label__user-info">Фамилия</li>
-                            <li>Криворучко</li>
+                            <li></li>
                         </div>
                         <div className="item__user-info">
                             <li className="label__user-info">Отчество</li>
-                            <li>Миколайович</li>
+                            <li></li>
                         </div>
                         <div className="item__user-info">
                             <li className="label__user-info">Email</li>
-                            <li>rostikowb132@gmail.com</li>
+                            <li>{user.email}</li>
                         </div>
                         <div className="item__user-info">
                             <li className="label__user-info">Телефон</li>
@@ -58,7 +71,7 @@ class infoUser extends Component {
                         </div>
                         <div className="item__user-info">
                             <li className="label__user-info">Купоны</li>
-                            <li>Нету</li>
+                            <li>{user.cupon.length === 0 ? 'Нету' : user.cupon}</li>
                         </div>
                         <div className="item__user-info">
                             <li className="label__user-info">Заказы</li>
@@ -71,7 +84,7 @@ class infoUser extends Component {
                     <div className="user-modal">
                         <h1>Изменение данных</h1>
                         <Formik
-                            initialValues={{ name: '', last_name: '', patronymic: '', email: '', phone: '', city: '' }}
+                            initialValues={{ name: user.FN || '', last_name: '', patronymic: '', email: user.email || '', phone: '', city: '', department: '',  coupon: '', order: ''}}
                             onSubmit={(values, actions) => {
                                 setTimeout(() => {
                                     alert(JSON.stringify(values, null, 2));
@@ -86,8 +99,11 @@ class infoUser extends Component {
                                     <Field type="email" name="email" placeholder="Email" component={RenderField} />
                                     <Field type="text" name="phone" placeholder="Телефон" component={RenderField} />
                                     <Field type="text" name="city" placeholder="Город" component={RenderField} />
+                                    <Field type="text" name="department" placeholder="Отделение" component={RenderField} />
+                                    <Field type="text" name="coupon" placeholder="Купоны" component={RenderField} />
+                                    <Field type="text" name="order" placeholder="Заказы" component={RenderField} />
                                     {/* <Field name="lastName" placeholder="Doe" component={MyInput} /> */}
-                                    <button type="submit">Submit</button>
+                                    <button type="submit">Отправить</button>
                                 </Form>
                         </Formik>
                     </div>
@@ -97,6 +113,19 @@ class infoUser extends Component {
     }
 }
 
-export default infoUser;
+const mapStateToProps = state => {
+    return{
+        users: state.users.arr,
+        token: state.auth.token,
+    }
+}
+
+const mapDispatchToProps = {
+    fetchAllUsers
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(infoUser);
+
+
 
 

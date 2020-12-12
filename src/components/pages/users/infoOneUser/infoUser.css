@@ -1,0 +1,108 @@
+.wrapper-info-user {
+  max-width: 1140px;
+  width: 100%;
+  /* background: lightblue; */
+  text-align: initial;
+}
+
+.wrapper-info-user > .container__info-user h2 {
+  padding: 0 10px;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  margin-top: 1em;
+}
+
+.wrapper-info-user > .container__info-user button {
+  margin-top: 3em;
+}
+
+.wrapper-info-user .list__info-user {
+  /* background: #999999; */
+  max-width: 768px;
+  margin-top: 3em;
+}
+
+.wrapper-info-user .list__info-user > .item__user-info {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.1em;
+}
+.wrapper-info-user .list__info-user > .item__user-info:last-child {
+  margin-bottom: 0;
+}
+.wrapper-info-user .list__info-user .label__user-info {
+  /* background: purple; */
+  min-width: 100px;
+  font-weight: 700;
+}
+.wrapper-info-user .list__info-user .label__user-links:hover a {
+  color: #00cc9d;
+  transition: all 200ms;
+}
+.user-modal {
+  padding: 2em;
+}
+.user-modal > h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.user-modal form {
+  margin: 2em 0;
+}
+.user-modal form button {
+  cursor: pointer;
+  background: #4caf50;
+  color: #fff;
+  padding: 10px;
+  font-size: 15px;
+  max-width: 160px;
+  width: 100%;
+  outline: none;
+  border: none;
+  margin-top: 2em;
+  border-radius: 4px;
+}
+
+.wrapper-info-user > .item {
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+  position: relative;
+}
+
+.wrapper-info-user > .item button {
+  border: 1px solid white;
+  background: white;
+  width: 100%;
+  padding: 15px;
+  border-radius: 3px;
+  color: blue;
+  transition: background 0.5s ease;
+}
+
+.wrapper-info-user > a.arrow {
+  border: none;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  margin: 1em 0;
+}
+.wrapper-info-user > a.arrow:hover {
+  background: rgba(97, 12, 54, 0.1);
+}
+
+.wrapper-info-user > a.arrow p {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  margin-left: 10px;
+  transition: 0.3s;
+}

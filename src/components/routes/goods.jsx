@@ -16,7 +16,7 @@ import { Tickets } from "../pages/tickets/tickets";
 import { Orders } from "../pages/orders/orders";
 import { CreateGoods } from "../pages/goods/create/createGoods";
 import { createGoodsMenu } from "../pages/goods/create/createGoodsMenu";
-import infoUser from "../pages/infoUser/infoUser";
+import infoUser from "../pages/users/infoOneUser/infoUser";
 
 // let productLabel = props.product?.nm;
 

@@ -1,0 +1,12 @@
+.wrapper-tickets{
+    /* max-width: 1140px; */
+    width: 100%;
+    margin-top: 2em;
+}
+
+.wrapper-tickets > .tickets-list{
+    display: grid;
+    grid-gap: 2em 2em;
+    grid-template-columns: repeat(auto-fit, minmax(49%, 1fr));
+}
+

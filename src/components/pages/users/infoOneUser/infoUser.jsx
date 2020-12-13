@@ -32,15 +32,39 @@ class infoUser extends Component {
   handleSetUserOrders = (ordersArr) => {
     this.props.setFetchArrOrders(ordersArr);
   };
+  handleSendDataToApi = (UD) => {
+    const {
+      token,
+      match: { params },
+      fetchAllUsers,
+    } = this.props;
+
+    UD._id = params.id;
+    fetchAllUsers(token, params.id, UD);
+  };
+  isRights = (right) => {
+    switch (right) {
+      case 0:
+        return "Юзер";
+      case 1:
+        return "Модер";
+      case 2:
+        return "Админ";
+      default:
+        return "Права не валидны";
+    }
+  };
 
   render() {
     const {
       match: { params },
       users,
+      errMsg,
     } = this.props;
     const { isOpenModal } = this.state;
 
     const user = users[0];
+
     if (!user) {
       return <p>Loading....</p>;
     }
@@ -92,7 +116,7 @@ class infoUser extends Component {
             </div>
             <div className="item__user-info">
               <li className="label__user-info">Права</li>
-              <li>В планах</li>
+              <li>{this.isRights(user.rights)}</li>
             </div>
             <div className="item__user-info">
               <li className="label__user-info">Купоны</li>
@@ -125,41 +149,41 @@ class infoUser extends Component {
             <h1>Изменение данных</h1>
             <Formik
               initialValues={{
-                name: user.FN || "",
-                last_name: user.LN || "",
-                patronymic: user.SN || "",
+                FN: user.FN || "",
+                LN: user.LN || "",
+                SN: user.SN || "",
                 email: user.email || "",
-                phone: user.tel || "",
+                tel: user.tel || "",
                 city: user.city || "",
-                department: user.branchN || "",
+                branchN: user.branchN || "",
                 // 0 - User, 1 - Moder, 2 - Admin
-                rights: user.rights || 0,
-                // coupon: "",
-                // order: "",
+                rights: user.rights,
               }}
               onSubmit={(values, actions) => {
-                setTimeout(() => {
-                  alert(JSON.stringify(values, null, 2));
-                  actions.setSubmitting(false);
-                }, 1000);
+                this.handleSendDataToApi(values);
+                // console.log(user);
+                // setTimeout(() => {
+                //   alert(JSON.stringify(values, null, 2));
+                //   actions.setSubmitting(false);
+                // }, 1000);
               }}
             >
               <Form>
                 <Field
                   type="text"
-                  name="name"
+                  name="FN"
                   placeholder="Имя"
                   component={RenderField}
                 />
                 <Field
                   type="text"
-                  name="last_name"
+                  name="LN"
                   placeholder="Фамилия"
                   component={RenderField}
                 />
                 <Field
                   type="text"
-                  name="patronymic"
+                  name="SN"
                   placeholder="Отчество"
                   component={RenderField}
                 />
@@ -171,7 +195,7 @@ class infoUser extends Component {
                 />
                 <Field
                   type="text"
-                  name="phone"
+                  name="tel"
                   placeholder="Телефон"
                   component={RenderField}
                 />
@@ -183,7 +207,7 @@ class infoUser extends Component {
                 />
                 <Field
                   type="text"
-                  name="department"
+                  name="branchN"
                   placeholder="Отделение"
                   component={RenderField}
                 />
@@ -193,23 +217,10 @@ class infoUser extends Component {
                   placeholder="Права"
                   component={RenderField}
                 />
-                {/*<Field*/}
-                {/*  type="text"*/}
-                {/*  name="coupon"*/}
-                {/*  placeholder="Купоны"*/}
-                {/*  component={RenderField}*/}
-                {/*/>*/}
-                {/*<Field*/}
-                {/*  type="text"*/}
-                {/*  name="order"*/}
-                {/*  placeholder="Заказы"*/}
-                {/*  component={RenderField}*/}
-                {/*/>*/}
-
-                {/* <Field name="lastName" placeholder="Doe" component={MyInput} /> */}
                 <button type="submit">Отправить</button>
               </Form>
             </Formik>
+            <span className="user-modal-errMsg">{errMsg.toString()}</span>
           </div>
         </DialogComponent>
       </div>
@@ -221,6 +232,7 @@ const mapStateToProps = (state) => {
   return {
     users: state.users.arr,
     token: state.auth.token,
+    errMsg: state.users.msg,
   };
 };
 

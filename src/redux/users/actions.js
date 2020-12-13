@@ -1,17 +1,10 @@
-import {
-  CHANGE_AUTH_MODAL,
-  CHANGE_BASKET_MODAL,
-  CHANGE_CATALOG_MODAL,
-  CHANGE_COMMENTS_MODAL,
-  CHANGE_LIKE_MODAL,
-  GET_ORDERS,
-  GET_TICKETS,
-  GET_USERS,
-} from "../types";
+import { GET_USERS } from "../types";
 import bent from "bent";
 import { option } from "../../option";
 
-export const fetchAllUsers = (token, userId = false) => {
+export const fetchAllUsers = (token, userId = false, UD = false) => {
+  const path = UD ? "/users/update" : "/users/readAll";
+
   return async (dispatch) => {
     let res = await bent(
       option.api,
@@ -20,8 +13,8 @@ export const fetchAllUsers = (token, userId = false) => {
       "json",
       200
     )(
-      "/users/readAll",
-      { userId },
+      path,
+      { userId, UD },
       {
         authorization: token,
       }
@@ -30,6 +23,7 @@ export const fetchAllUsers = (token, userId = false) => {
     dispatch({
       type: GET_USERS,
       arr: res["arr"],
+      msg: res.err || false,
     });
   };
 };

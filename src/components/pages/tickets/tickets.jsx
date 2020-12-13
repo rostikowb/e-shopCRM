@@ -14,13 +14,9 @@ export const Ticket = (props) => {
   return (
     <div className="wrapper-tickets">
       <div className="tickets-list">
-        {
-          props.tickets.map((ticket, index) => {
-            return(
-              <CardTicket color="darkred" ticket={ticket} key={index}/>
-            )
-          })
-        }
+        {props.tickets.map((ticket, index) => {
+          return <CardTicket color="darkred" ticket={ticket} key={index} />;
+        })}
       </div>
     </div>
   );

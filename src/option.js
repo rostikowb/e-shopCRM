@@ -1,5 +1,5 @@
 export const option = {
-  // api: "http://localhost:3001",
+  // api: "http://localhost:5000",
   api: "https://api.vsivuha.online",
   // domen: 'http://localhost:3000'
   // goodsCount

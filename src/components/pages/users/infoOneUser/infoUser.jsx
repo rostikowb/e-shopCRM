@@ -29,9 +29,9 @@ class infoUser extends Component {
   handleCloseModal = () => {
     this.setState({ isOpenModal: false });
   };
-  handleSetUserOrders = (ordersArr) => {
-    this.props.setFetchArrOrders(ordersArr);
-  };
+  // handleSetUserOrders = (ordersArr) => {
+  //   this.props.setFetchArrOrders(ordersArr);
+  // };
   handleSendDataToApi = (UD) => {
     const {
       token,
@@ -81,7 +81,7 @@ class infoUser extends Component {
               d="M45.63 75.8L.375 38.087 45.63.375"
             />
           </svg>
-          <p>Users</p>
+          <p>Все пользователи</p>
         </NavLink>
         <div className="container__info-user">
           <h2>Id: {params.id}</h2>
@@ -126,10 +126,10 @@ class infoUser extends Component {
               <li className="label__user-info">Заказы</li>
               <li
                 className="label__user-links"
-                onClick={this.handleSetUserOrders(user.boughtArr)}
+                // onClick={this.handleSetUserOrders(user.boughtArr)}
               >
                 {user.boughtArr.length ? (
-                  <NavLink to="/orders">Перейти</NavLink>
+                  <NavLink to={"/orders/userId/" + user._id}>Перейти</NavLink>
                 ) : (
                   "Нету"
                 )}

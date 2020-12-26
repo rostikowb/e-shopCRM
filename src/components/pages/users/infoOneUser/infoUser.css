@@ -97,7 +97,7 @@
 
 .wrapper-info-user > a.arrow {
   border: none;
-  width: 100px;
+  max-width: 250px;
   display: flex;
   align-items: center;
   padding: 6px;
@@ -115,4 +115,5 @@
   font-size: 15px;
   margin-left: 10px;
   transition: 0.3s;
+  white-space: nowrap;
 }

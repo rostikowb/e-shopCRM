@@ -6,9 +6,15 @@ import { fetchAllOrders } from "../../../redux/orders/actions";
 import { NavLink } from "react-router-dom";
 
 export const Order = (props) => {
+  const order = props.orders;
   useEffect(() => {
-    props.fetchAllOrders(props.token, props.loadArr);
+    const userId = props.match?.params?.userId;
+    if (userId) props.fetchAllOrders(props.token, { userId });
+    else props.fetchAllOrders(props.token, props.loadArr);
   }, []);
+
+  if (!order.length) return <div>Loading...</div>;
+
   return (
     <div className={s.mainBox}>
       <div className={s.ordersBox}>
@@ -22,9 +28,12 @@ export const Order = (props) => {
             >
               <div className={s.orderItemTop}>
                 <div>
-                  <NavLink className={s.Id} to={`/users/${item.UD?.userId}`}>
-                    userId
+                  <NavLink className={s.Id} to={`/orders/${item._id}`}>
+                    Подробней
                   </NavLink>
+                  {/*<NavLink className={s.Id} to={`/users/${item.UD?.userId}`}>*/}
+                  {/*  userId*/}
+                  {/*</NavLink>*/}
                 </div>
                 <div>
                   {new Date(item.date).toLocaleString("ru-RU", {
@@ -39,6 +48,19 @@ export const Order = (props) => {
               <div className={s.orderItemBottom}>
                 <div className={s.userInfo}>
                   {/*<div>*/}
+                  <div>
+                    <span>Пользователь: </span>
+                    {item.UD?.userId ? (
+                      <NavLink
+                        className={s.Id}
+                        to={`/users/${item.UD?.userId}`}
+                      >
+                        Подробней
+                      </NavLink>
+                    ) : (
+                      "Нет аккаунта"
+                    )}
+                  </div>
                   <div>
                     <span>Имя: </span>
                     <span>{item.UD.FN}</span>

@@ -4,6 +4,7 @@ const initialState = {
   loadArr: [],
   arr: [],
   one: null,
+  errMsg: "",
 };
 
 export const orders = (state = initialState, action) => {
@@ -12,7 +13,10 @@ export const orders = (state = initialState, action) => {
       if (action.arr) state.arr = action.arr;
       return { ...state };
     case GET_ONE_ORDERS:
-      state.one = action.one;
+      const { invalid, err, order } = action.payload;
+      if (!invalid) state.one = order;
+      else state.errMsg = err;
+
       return { ...state };
     case GET_ARR_ORDERS:
       state.loadArr = action.loadArr;

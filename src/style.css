@@ -23,6 +23,24 @@ a {
   text-decoration: none;
   color: #000;
 }
+button[type="submit"] {
+  cursor: pointer;
+  background: #4caf50;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  max-width: 160px;
+  width: 100%;
+  outline: none;
+  border: none;
+  margin-top: 2em;
+  border-radius: 4px;
+  transition: background 0.5s ease;
+}
+button[type="submit"]:hover {
+  background: #af6b4c;
+  transition: background 0.5s ease;
+}
 .container {
   max-width: 1200px;
   min-width: 600px;

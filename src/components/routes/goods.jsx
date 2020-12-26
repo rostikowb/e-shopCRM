@@ -17,6 +17,7 @@ import { Orders } from "../pages/orders/orders";
 import { CreateGoods } from "../pages/goods/create/createGoods";
 import { createGoodsMenu } from "../pages/goods/create/createGoodsMenu";
 import infoUser from "../pages/users/infoOneUser/infoUser";
+import { OneOrder } from "../pages/orders/oneOrder/oneOrder";
 
 // let productLabel = props.product?.nm;
 
@@ -38,6 +39,8 @@ export const GoodsRout = (props) => {
             <Route path="/users/:id" component={infoUser} />
             {/*<Route path="/users/read:id" component={Users} />*/}
             <Route path="/tickets" component={Tickets} />
+            <Route path="/orders/userId/:userId" component={Orders} />
+            <Route path="/orders/:id" component={OneOrder} />
             <Route path="/orders" component={Orders} />
             {/*<Route exact path={["/", "/:catalog"]} component={GoodsArr} />*/}
             {/*<Route path="/:catalog/:product" component={Goods} />*/}

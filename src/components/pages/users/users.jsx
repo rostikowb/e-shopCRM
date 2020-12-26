@@ -85,8 +85,8 @@ export const User = (props) => {
                     <span>Заказы: </span>
                     <NavLink
                       className={ss.Id}
-                      to={`/orders`}
-                      onClick={() => setOrdersArr(item.boughtArr)}
+                      to={"/orders/userId/" + item._id}
+                      // onClick={() => setOrdersArr(item.boughtArr)}
                     >
                       Показать
                     </NavLink>

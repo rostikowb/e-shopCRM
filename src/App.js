@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router-dom";
 import "./App.css";
 import "./style.css";
-import page404 from "./components/statusCodePages/404/404";
+import page404 from "./components/arhiv/statusCodePages/404/404";
 import loader from "./assets/img/loader.gif";
 import { config } from "react-transition-group";
 import { initLocalStorage } from "./localStorage/localStorFunc";
